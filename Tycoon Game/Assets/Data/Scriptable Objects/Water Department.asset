@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bec6fe274f0004eb986e63b56f7455, type: 3}
+  m_Name: Water Department
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 143c9890b610a4641b0512f94fe53b2f, type: 3}
+  BuildCost: 5
+  DepartmentName: Water Department

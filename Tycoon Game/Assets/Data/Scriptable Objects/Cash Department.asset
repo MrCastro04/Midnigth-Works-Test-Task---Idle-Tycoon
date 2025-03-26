@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77bec6fe274f0004eb986e63b56f7455, type: 3}
+  m_Name: Cash Department
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 472205618895051162, guid: 2d745b77251d68347a16b8c619570c5a, type: 3}
+  Icon: {fileID: 21300000, guid: 9dd7d66f98326d04cb6585a6692ec1a5, type: 3}
+  BuildCost: 5
+  DepartmentName: Cash Department
