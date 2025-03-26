@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77bec6fe274f0004eb986e63b56f7455, type: 3}
   m_Name: Water Department
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 3374389266713628667, guid: 23d8ea564d23dea409f4c169f76f75a6, type: 3}
   Icon: {fileID: 21300000, guid: 143c9890b610a4641b0512f94fe53b2f, type: 3}
   BuildCost: 5
   DepartmentName: Water Department
