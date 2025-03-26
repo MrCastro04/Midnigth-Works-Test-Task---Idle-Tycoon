@@ -4,5 +4,6 @@ namespace UI
 {
     public class BuildingsViwer : MonoBehaviour
     {
+
     }
 }

@@ -1,3 +1,4 @@
+using Core;
 using UnityEngine;
 
 namespace Building
@@ -22,6 +23,8 @@ namespace Building
             _builtDepartment = departmentGO.GetComponent<Department>();
 
             _builtDepartment.Init(data);
+
+            EventManager.RaiseOnPlayerBuildDepartment();
         }
     }
 }

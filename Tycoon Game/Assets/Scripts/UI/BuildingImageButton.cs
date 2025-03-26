@@ -1,4 +1,5 @@
 using Building;
+using Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,8 @@ namespace UI
         private void OnClick()
         {
             BuildManager.Instance.SelectDepartmentToBuild(_departmentData);
+
+            EventManager.RaiseOnPlayerClickBuildingImageButton();
 
             Debug.Log($"Вибрано відділ: {_departmentData.DepartmentName}");
         }
