@@ -13,6 +13,7 @@ namespace Building
             if (IsEmpty == false)
             {
                 Debug.LogWarning("Already built here!");
+
                 return;
             }
 

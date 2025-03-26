@@ -7,7 +7,6 @@ namespace Building
         [SerializeField] private DepartmentData[] _availableDepartments;
 
         public static BuildManager Instance { get; private set; }
-        public DepartmentData[] GetAvailableDepartments() => _availableDepartments;
 
         private DepartmentData _currentSelectedDepartment;
 
