@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Building
+namespace Scriptable_Objects
 {
     [CreateAssetMenu(
         fileName = "DepartmentData",
