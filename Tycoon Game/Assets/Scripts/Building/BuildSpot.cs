@@ -10,6 +10,7 @@ namespace Building
 
         private Department _builtDepartment;
         private BoxCollider _boxCollider;
+        private bool _hasDepartment;
 
         public bool IsEmpty => _builtDepartment == null;
 
@@ -20,12 +21,7 @@ namespace Building
 
         public void Build(DepartmentData data)
         {
-            if (IsEmpty == false)
-            {
-                Debug.LogWarning("Already built here!");
-
-                return;
-            }
+            if (IsEmpty == false) return;
 
             GameObject departmentGO = Instantiate(data.Prefab, transform.position, Quaternion.identity);
 
@@ -33,11 +29,15 @@ namespace Building
 
             _builtDepartment.Init(data);
 
+            _hasDepartment = true;
+
             EventManager.RaiseOnPlayerBuildDepartment();
         }
 
         public void ShowBuildZone()
         {
+            if(_hasDepartment) return;
+
             _boxCollider.enabled = true;
 
             _colorBuildZone.gameObject.SetActive(true);
