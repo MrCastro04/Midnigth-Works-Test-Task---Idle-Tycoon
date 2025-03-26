@@ -10,18 +10,18 @@ namespace Building
         private void Awake()
         {
             _buildSpots = GetComponentsInChildren<BuildSpot>();
-
-            Debug.Log($"Знайдено точок для будівництва: {_buildSpots.Length}");
         }
 
         private void OnEnable()
         {
-            EventManager.OnPlayerClickBuildButton += HandlePlayerClickBuildButton;
+            EventManager.OnPlayerClickBuildingImageButton += HandlePlayerClickBuildButton;
+            EventManager.OnPlayerBuildDepartment += HandlePlayerBuildDepartment;
         }
 
         private void OnDisable()
         {
-            EventManager.OnPlayerClickBuildButton += HandlePlayerClickBuildButton;
+            EventManager.OnPlayerClickBuildingImageButton += HandlePlayerClickBuildButton;
+            EventManager.OnPlayerBuildDepartment -= HandlePlayerBuildDepartment;
         }
 
         private void HandlePlayerClickBuildButton()
@@ -29,6 +29,14 @@ namespace Building
             foreach (var buildSpot in _buildSpots)
             {
                 buildSpot.ShowBuildZone();
+            }
+        }
+
+        private void HandlePlayerBuildDepartment()
+        {
+            foreach (var buildSpot in _buildSpots)
+            {
+                buildSpot.HideBuildZone();
             }
         }
     }
