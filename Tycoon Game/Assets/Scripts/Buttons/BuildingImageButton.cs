@@ -4,7 +4,7 @@ using Scriptable_Objects;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Buttons
 {
     public class BuildingImageButton : MonoBehaviour
     {
@@ -29,8 +29,6 @@ namespace UI
             BuildManager.Instance.SelectDepartmentToBuild(_departmentData);
 
             EventManager.RaiseOnPlayerClickBuildingImageButton();
-
-            Debug.Log($"Вибрано відділ: {_departmentData.DepartmentName}");
         }
     }
 }
