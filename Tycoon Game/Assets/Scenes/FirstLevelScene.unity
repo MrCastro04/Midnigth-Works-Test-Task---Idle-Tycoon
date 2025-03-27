@@ -6511,6 +6511,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -93.92999
       objectReference: {fileID: 0}
+    - target: {fileID: 3837925409742887321, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.699997
+      objectReference: {fileID: 0}
     - target: {fileID: 4005267689036159119, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6591,6 +6595,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5001710193741646799, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 644.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001710193741646799, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -278.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313223091268996831, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 145.90002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313223091268996831, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -192.29999
+      objectReference: {fileID: 0}
     - target: {fileID: 6953855114165010367, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
       propertyPath: m_Name
       value: Main Canvas
@@ -6599,6 +6619,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 7521601126767386346, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 102.900024
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7604483324159773664, guid: 719f3f53402312b46bf7b02d6913ae85, type: 3}
     m_RemovedGameObjects:
