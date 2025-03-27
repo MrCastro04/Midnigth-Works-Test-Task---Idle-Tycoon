@@ -3,7 +3,7 @@ using Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace Buttons
 {
     public class BuildingImageButton : MonoBehaviour
     {
