@@ -324,6 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3718955136195590668}
   - component: {fileID: 7945767664686395951}
+  - component: {fileID: -1020096038379497735}
   m_Layer: 0
   m_Name: character-female-c
   m_TagString: Untagged
@@ -371,6 +372,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-1020096038379497735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095937354248560822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2419e4832a1d531418d3a21488158a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5128403427958326474
 GameObject:
   m_ObjectHideFlags: 0
