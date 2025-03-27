@@ -1,6 +1,6 @@
-namespace NPC
+namespace NPC.States_And_Controller
 {
-    public class AISearchBreadDepartmentState : AIBaseState
+    public class AIPaymentState : AIBaseState
     {
         public override void EnterState(NPCController npc)
         {

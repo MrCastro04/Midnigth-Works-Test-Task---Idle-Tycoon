@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace NPC
+namespace NPC.States_And_Controller
 {
     public class AISearhCashierState : AIBaseState
     {
@@ -45,6 +45,7 @@ namespace NPC
             foreach (var cashier in cashiers)
             {
                 float distance = Vector3.Distance(npc.transform.position, cashier.transform.position);
+
                 if (distance < shortestDistance)
                 {
                     shortestDistance = distance;

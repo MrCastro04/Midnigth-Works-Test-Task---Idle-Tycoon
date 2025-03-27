@@ -1,4 +1,4 @@
-namespace NPC
+namespace NPC.States_And_Controller
 {
     public abstract class AIBaseState
     {
