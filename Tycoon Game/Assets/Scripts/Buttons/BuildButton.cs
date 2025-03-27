@@ -12,18 +12,8 @@ namespace Buttons
         private void Awake()
         {
             _button = GetComponent<Button>();
-        }
 
-        private void Start()
-        {
-            _button.onClick.AddListener(OnClick);
-        }
-
-        private void OnClick()
-        {
-            _button.gameObject.SetActive(false);
-
-            EventManager.RaisePlayerClickBuildButton();
+            _button.onClick.AddListener(EventManager.RaisePlayerClickBuildButton);
         }
     }
 }

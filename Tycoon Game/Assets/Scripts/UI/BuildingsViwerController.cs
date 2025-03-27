@@ -1,13 +1,14 @@
+using Buttons;
 using Core;
 using UnityEngine;
 
 namespace UI
 {
-    public class BuildingsCanvas : MonoBehaviour
+    public class BuildingsViwerController : MonoBehaviour
     {
-        [SerializeField] private BuildingsViwer _buildingsViwer;
+       [SerializeField] private BuildingImageButton[] _buttons;
 
-        private void OnEnable()
+       private void OnEnable()
         {
             EventManager.OnPlayerClickBuildButton += HandlePlayerClickBuildButton;
             EventManager.OnPlayerClickBuildingImageButton += HandleOnPlayerClickBuildingImageButton;
@@ -21,12 +22,18 @@ namespace UI
 
         private void HandlePlayerClickBuildButton()
         {
-            _buildingsViwer.gameObject.SetActive(true);
+            foreach (var button in _buttons)
+            {
+                button.gameObject.SetActive(true);
+            }
         }
 
         private void HandleOnPlayerClickBuildingImageButton()
         {
-            _buildingsViwer.gameObject.SetActive(false);
+            foreach (var button in _buttons)
+            {
+                button.gameObject.SetActive(false);
+            }
         }
     }
 }
