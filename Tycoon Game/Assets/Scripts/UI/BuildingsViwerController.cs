@@ -12,12 +12,14 @@ namespace UI
         {
             EventManager.OnPlayerClickBuildButton += HandlePlayerClickBuildButton;
             EventManager.OnPlayerClickBuildingImageButton += HandleOnPlayerClickBuildingImageButton;
+            EventManager.OnPlayerClickCloseWindowButton += HandlePlayerClickCloseWindowButton;
         }
 
         private void OnDisable()
         {
             EventManager.OnPlayerClickBuildButton -= HandlePlayerClickBuildButton;
             EventManager.OnPlayerClickBuildingImageButton -= HandleOnPlayerClickBuildingImageButton;
+            EventManager.OnPlayerClickCloseWindowButton -= HandlePlayerClickCloseWindowButton;
         }
 
         private void HandlePlayerClickBuildButton()
@@ -29,6 +31,14 @@ namespace UI
         }
 
         private void HandleOnPlayerClickBuildingImageButton()
+        {
+            foreach (var button in _buttons)
+            {
+                button.gameObject.SetActive(false);
+            }
+        }
+
+        private void HandlePlayerClickCloseWindowButton()
         {
             foreach (var button in _buttons)
             {
