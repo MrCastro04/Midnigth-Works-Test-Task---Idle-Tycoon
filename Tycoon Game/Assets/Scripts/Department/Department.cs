@@ -7,16 +7,18 @@ namespace Department
 {
     public class Department : MonoBehaviour , IClickablePrefab
     {
-        private DepartmentData _data;
+        [SerializeField] private DepartmentData _data;
 
-        public void Init(DepartmentData data)
-        {
-            _data = data;
-        }
 
         public void OnMouseDown()
         {
-          EventManager.RaiseOnPlayerClickOnDepartment(this._data);
+            if (_data == null)
+            {
+                Debug.LogError($"_data не задано в Department на {gameObject.name}");
+                return;
+            }
+
+            EventManager.RaiseOnPlayerClickOnDepartment(_data);
         }
     }
 }

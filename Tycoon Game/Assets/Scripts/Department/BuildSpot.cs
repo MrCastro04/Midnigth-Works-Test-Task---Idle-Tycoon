@@ -28,7 +28,7 @@ namespace Department
 
             _builtDepartment = departmentGO.GetComponent<global::Department.Department>();
 
-            _builtDepartment.Init(data);
+            /*_builtDepartment.Init(data);*/
 
             _hasDepartment = true;
 

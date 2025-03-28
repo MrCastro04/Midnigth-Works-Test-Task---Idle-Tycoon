@@ -7,9 +7,14 @@ namespace UI.Canvas
 {
     public class AllCanvasController : MonoBehaviour
     {
-       [SerializeField] private UpgradeBreadDepCanvasController _upgradeBreadDepCanvas;
+        private UpgradeBreadDepCanvasController _upgradeBreadDepCanvas;
 
-       private void OnEnable()
+        private void Awake()
+        {
+            _upgradeBreadDepCanvas = GetComponentInChildren<UpgradeBreadDepCanvasController>();
+        }
+
+        private void OnEnable()
        {
            EventManager.OnPlayerClickOnDepartment += HandlePlayerClickOnDepartment;
        }
@@ -21,7 +26,17 @@ namespace UI.Canvas
 
        private void HandlePlayerClickOnDepartment(DepartmentData departmentData)
        {
-        
+           switch (departmentData.DepartmentName)
+           {
+                 case "Bread Department":
+
+                     _upgradeBreadDepCanvas.SetActiveCanvasTrue();
+
+                     EventManager.RaiseOnCanvasActive();
+                     break;
+
+                 // додати Cashier Department
+           }
        }
     }
 }

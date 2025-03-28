@@ -12,6 +12,7 @@ namespace UI
            EventManager.OnPlayerClickBuildButton += HandlePlayerClickBuildButton;
            EventManager.OnPlayerBuildDepartment += HandlePlayerBuildDepartment;
            EventManager.OnPlayerClickCloseWindowButton += HandlePlayerClickCloseWindowButton;
+           EventManager.OnCanvasActive += HandleCanvasActive;
        }
 
        private void OnDisable()
@@ -19,21 +20,15 @@ namespace UI
            EventManager.OnPlayerClickBuildButton -= HandlePlayerClickBuildButton;
            EventManager.OnPlayerBuildDepartment -= HandlePlayerBuildDepartment;
              EventManager.OnPlayerClickCloseWindowButton -= HandlePlayerClickCloseWindowButton;
+             EventManager.OnCanvasActive -= HandleCanvasActive;
        }
 
-       private void HandlePlayerClickBuildButton()
-       {
-           _button.gameObject.SetActive(true);
-       }
+       private void HandlePlayerClickBuildButton() => SetButtonActiveTrue();
+       private void HandleCanvasActive() => SetButtonActiveTrue();
+       private void HandlePlayerClickCloseWindowButton() => SetButtonActiveFalse();
+       private void HandlePlayerBuildDepartment() => SetButtonActiveFalse();
 
-       private void HandlePlayerBuildDepartment()
-       {
-           _button.gameObject.SetActive(false);
-       }
-
-       private void HandlePlayerClickCloseWindowButton()
-       {
-           _button.gameObject.SetActive(false);
-       }
+       private void SetButtonActiveFalse() => _button.gameObject.SetActive(false);
+       private void SetButtonActiveTrue() => _button.gameObject.SetActive(true);
     }
 }
