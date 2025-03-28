@@ -2457,7 +2457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3077809151240753009, guid: 6b13999586587ff4eb19d44213135438, type: 3}
       propertyPath: m_Name
-      value: Info-Container (1)
+      value: HIRE-Info-Container (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5325593210634450684, guid: 6b13999586587ff4eb19d44213135438, type: 3}
       propertyPath: m_Pivot.x
