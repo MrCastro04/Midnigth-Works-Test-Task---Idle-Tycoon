@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UI.Canvas
 {
-    public class UpgradeBreadDepCanvasController : MonoBehaviour
+    public class UpgradeCashierDepCanvasController : MonoBehaviour
     {
         private UnityEngine.Canvas _canvas;
 

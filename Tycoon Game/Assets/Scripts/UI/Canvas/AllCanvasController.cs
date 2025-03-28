@@ -1,4 +1,3 @@
-using System;
 using Core;
 using Scriptable_Objects;
 using UnityEngine;
@@ -8,10 +7,13 @@ namespace UI.Canvas
     public class AllCanvasController : MonoBehaviour
     {
         private UpgradeBreadDepCanvasController _upgradeBreadDepCanvas;
+        private UpgradeCashierDepCanvasController _upgradeCashierDepCanvas;
 
         private void Awake()
         {
             _upgradeBreadDepCanvas = GetComponentInChildren<UpgradeBreadDepCanvasController>();
+
+            _upgradeCashierDepCanvas = GetComponentInChildren<UpgradeCashierDepCanvasController>();
         }
 
         private void OnEnable()
@@ -33,9 +35,16 @@ namespace UI.Canvas
                      _upgradeBreadDepCanvas.SetActiveCanvasTrue();
 
                      EventManager.RaiseOnCanvasActive();
+
                      break;
 
-                 // додати Cashier Department
+                 case "Cash Department":
+
+                     _upgradeCashierDepCanvas.SetActiveCanvasTrue();
+
+                     EventManager.RaiseOnCanvasActive();
+
+                     break;
            }
        }
     }
