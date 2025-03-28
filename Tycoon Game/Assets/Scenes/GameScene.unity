@@ -2451,6 +2451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 32490145}
     m_Modifications:
+    - target: {fileID: 889247696024977475, guid: 6b13999586587ff4eb19d44213135438, type: 3}
+      propertyPath: m_text
+      value: HIRE EMPLOYEE
+      objectReference: {fileID: 0}
     - target: {fileID: 3077809151240753009, guid: 6b13999586587ff4eb19d44213135438, type: 3}
       propertyPath: m_Name
       value: Info-Container (1)
@@ -8352,9 +8356,9 @@ SceneRoots:
   - {fileID: 968761736}
   - {fileID: 5886747449099398970}
   - {fileID: 6646761274812993452}
-  - {fileID: 2523162780751257580}
   - {fileID: 3070130771648927811}
   - {fileID: 32490144}
+  - {fileID: 2523162780751257580}
   - {fileID: 8502529581174042847}
   - {fileID: 1083661409214040592}
   - {fileID: 7868846985347264796}
