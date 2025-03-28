@@ -630,7 +630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5325593210634450684}
   m_Layer: 5
-  m_Name: Info-Container
+  m_Name: Upgrade-Info-Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
