@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 889247696024977475, guid: 6b13999586587ff4eb19d44213135438, type: 3}
+      propertyPath: m_text
+      value: 'UPGRADE CASHIER 2 '
+      objectReference: {fileID: 0}
     - target: {fileID: 3077809151240753009, guid: 6b13999586587ff4eb19d44213135438, type: 3}
       propertyPath: m_Name
       value: Upgrade-Cashier2-Info-Container
