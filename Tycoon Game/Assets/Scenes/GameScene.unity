@@ -924,6 +924,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 549705703426308815, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 549705703426308815, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 549705703426308815, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 549705703426308815, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1221043061984865799, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1048,6 +1064,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upgrade Bread Department Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3022583790711876200, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3629074603708579432, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1117,6 +1137,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4499628602388860674, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005694991751686867, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005694991751686867, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005694991751686867, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005694991751686867, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -1203,6 +1239,22 @@ PrefabInstance:
     - target: {fileID: 7650752036285313556, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 31.700012
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727934502898206816, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727934502898206816, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727934502898206816, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727934502898206816, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7884583406726000048, guid: 668febdc49b86464da315b4ca2dc5ace, type: 3}
       propertyPath: m_AnchorMax.y
