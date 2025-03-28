@@ -2,14 +2,14 @@ using Core;
 using Scriptable_Objects;
 using UnityEngine;
 
-namespace Building
+namespace Department
 {
     [RequireComponent(typeof(BoxCollider))]
     public class BuildSpot : MonoBehaviour
     {
         [SerializeField] private GameObject _colorBuildZone;
 
-        private Department _builtDepartment;
+        private global::Department.Department _builtDepartment;
         private BoxCollider _boxCollider;
         private bool _hasDepartment;
 
@@ -26,7 +26,7 @@ namespace Building
 
             GameObject departmentGO = Instantiate(data.Prefab, transform.position, Quaternion.identity);
 
-            _builtDepartment = departmentGO.GetComponent<Department>();
+            _builtDepartment = departmentGO.GetComponent<global::Department.Department>();
 
             _builtDepartment.Init(data);
 

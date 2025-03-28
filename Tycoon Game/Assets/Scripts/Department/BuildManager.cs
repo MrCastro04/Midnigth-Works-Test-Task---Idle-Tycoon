@@ -1,7 +1,7 @@
 using Scriptable_Objects;
 using UnityEngine;
 
-namespace Building
+namespace Department
 {
     public class BuildManager : MonoBehaviour
     {

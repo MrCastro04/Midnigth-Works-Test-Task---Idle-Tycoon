@@ -1,4 +1,5 @@
 using System;
+using Scriptable_Objects;
 
 namespace Core
 {
@@ -9,6 +10,7 @@ namespace Core
         public static event Action OnPlayerBuildDepartment;
         public static event Action OnPlayerClickCloseWindowButton;
         public static event Action OnPlayerClickSelectLevelButton;
+        public static event Action<DepartmentData> OnPlayerClickOnDepartment;
 
         // MAIN MENU
         public static void RaiseOnPlayerClickSelectLevelButton() => OnPlayerClickSelectLevelButton?.Invoke();
@@ -20,6 +22,9 @@ namespace Core
         public static void RaiseOnPlayerClickBuildingImageButton() => OnPlayerClickBuildingImageButton?.Invoke();
         public static void RaiseOnPlayerBuildDepartment() => OnPlayerBuildDepartment?.Invoke();
         public static void RaiseOnPlayerClickCloseWindowButton() => OnPlayerClickCloseWindowButton?.Invoke();
+
+        public static void RaiseOnPlayerClickOnDepartment(DepartmentData departmentData) =>
+            OnPlayerClickOnDepartment?.Invoke(departmentData);
 
     }
 }

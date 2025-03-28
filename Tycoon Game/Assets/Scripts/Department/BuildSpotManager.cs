@@ -1,7 +1,7 @@
 using Core;
 using UnityEngine;
 
-namespace Building
+namespace Department
 {
     public class BuildSpotManager : MonoBehaviour
     {

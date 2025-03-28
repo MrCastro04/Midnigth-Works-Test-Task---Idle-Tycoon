@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Building
+namespace Department
 {
     public class BuildClickHandler : MonoBehaviour
     {
