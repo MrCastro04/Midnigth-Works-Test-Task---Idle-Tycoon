@@ -8,6 +8,7 @@ namespace Department
         private int _lastLevel;
         private int _priceValue;
         private int _processingValue;
+        private int _currentUpgradeCost;
         private Department _department;
 
         private void Awake()

@@ -3,11 +3,8 @@ namespace Core
     [System.Serializable]
     public class SaveData
     {
-        public int Gems;
         public int Dollars;
-
-        // Employees Data
-        public int Employees_Count;
+        public int Gems;
 
         // Cashier 1
         public int Cashier1_Level;
@@ -20,10 +17,9 @@ namespace Core
         public int Cashier2_UpgradeCost;
 
         // Bread Department
-        public int BreadDepartment_Level;
+        public int BreadDepartment_CurentLevel;
+        public int BreadDepartment_LastLevel;
         public int BreadDepartment_UpgradeCost;
         public int BreadDepartment_UnitPrice;
-        public float BreadDepartment_ProcessingSpeed;
-
     }
 }

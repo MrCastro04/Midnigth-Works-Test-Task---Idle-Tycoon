@@ -9,6 +9,7 @@ namespace Department
     {
         [SerializeField] private DepartmentData _data;
 
+        public DepartmentData Data => _data;
 
         public void OnMouseDown()
         {

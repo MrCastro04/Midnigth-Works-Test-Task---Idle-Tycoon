@@ -33,10 +33,10 @@ namespace Core
                     Cashier2_ProcessSpeed = 12f,
                     Cashier2_UpgradeCost = 10,
 
-                    BreadDepartment_Level = 1,
-                    BreadDepartment_UpgradeCost = 20,
-                    BreadDepartment_UnitPrice = 5,
-                    BreadDepartment_ProcessingSpeed = 3f
+                    BreadDepartment_CurentLevel = 1,
+                    BreadDepartment_LastLevel = 100,
+                    BreadDepartment_UpgradeCost = 10,
+                    BreadDepartment_UnitPrice = 2,
                 };
             }
 
