@@ -18,7 +18,7 @@ namespace NPC.States_And_Controller
         {
             Agent = GetComponent<NavMeshAgent>();
 
-            _currentState = SearhCashierState;
+            _currentState = SearchBreadDepartmentState;
         }
 
         private void Start()

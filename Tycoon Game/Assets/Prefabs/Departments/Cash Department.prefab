@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3151802083885307590}
   - component: {fileID: 6159811999531196015}
-  - component: {fileID: -707394419367700927}
   - component: {fileID: 8958541585960034035}
   - component: {fileID: 8428816346154248401}
+  - component: {fileID: -707394419367700927}
   m_Layer: 0
   m_Name: Cash Department
   m_TagString: Untagged
@@ -58,19 +58,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-707394419367700927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472205618895051162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1292ebcffbb44500a747905fff0b45e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: 1e5bcdc5b3b880840ba7a31397c0ba29, type: 2}
 --- !u!208 &8958541585960034035
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -106,6 +93,19 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &-707394419367700927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472205618895051162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1292ebcffbb44500a747905fff0b45e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: 1e5bcdc5b3b880840ba7a31397c0ba29, type: 2}
 --- !u!1 &1551260189894719313
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ Transform:
   m_GameObject: {fileID: 1551260189894719313}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.624, y: 0, z: 0.044}
+  m_LocalPosition: {x: 0.863, y: 0, z: 0.511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

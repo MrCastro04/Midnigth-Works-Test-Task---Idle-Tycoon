@@ -358,7 +358,7 @@ Transform:
   m_GameObject: {fileID: 6756622332893977257}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0, z: 0.53}
+  m_LocalPosition: {x: 0.4, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -471,9 +471,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5232139071266231337}
   - component: {fileID: -8876093905396346090}
-  - component: {fileID: 6146744243606508366}
   - component: {fileID: 8258206539075138340}
   - component: {fileID: 3562693180129648154}
+  - component: {fileID: 6146744243606508366}
   m_Layer: 0
   m_Name: Bread Department
   m_TagString: Untagged
@@ -520,19 +520,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 1, z: 1}
   m_Center: {x: 0.5, y: 0.5, z: 0}
---- !u!114 &6146744243606508366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143948377064963981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1292ebcffbb44500a747905fff0b45e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: 68d607704bda136428e9576980500da5, type: 2}
 --- !u!208 &8258206539075138340
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -568,6 +555,19 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &6146744243606508366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8143948377064963981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1292ebcffbb44500a747905fff0b45e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 11400000, guid: 68d607704bda136428e9576980500da5, type: 2}
 --- !u!1 &8362749653487721400
 GameObject:
   m_ObjectHideFlags: 0

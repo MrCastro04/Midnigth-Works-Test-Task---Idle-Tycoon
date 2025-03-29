@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace NPC
+namespace NPC.Points
 {
     public class CashierPoint : MonoBehaviour
     {

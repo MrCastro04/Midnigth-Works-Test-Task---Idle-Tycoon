@@ -1,3 +1,4 @@
+using NPC.Points;
 using UnityEngine;
 
 namespace NPC.States_And_Controller
