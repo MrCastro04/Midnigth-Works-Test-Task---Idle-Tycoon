@@ -18,6 +18,8 @@ namespace Core
         {
             Dollars += amount;
             Debug.Log($"+{amount}$ | Тепер: {Dollars}$");
+
+            EventManager.RaiseOnPlayerGetDollars(Dollars);
         }
 
         public bool SpendDollars(int amount)
@@ -25,6 +27,28 @@ namespace Core
             if (Dollars < amount) return false;
 
             Dollars -= amount;
+
+            EventManager.RaiseOnPlayerSpendDollars(Dollars);
+
+            return true;
+        }
+
+        public void EarnGems(int amount)
+        {
+            Gems += amount;
+            Debug.Log($"+{amount}$ | Тепер: {Dollars}$");
+
+            EventManager.RaiseOnPlayerGetGems(Gems);
+
+        }
+
+        public bool SpendGems(int amount)
+        {
+            if (Gems < amount) return false;
+
+            Gems -= amount;
+
+            EventManager.RaiseOnPlayerSpendGems(Gems);
 
             return true;
         }

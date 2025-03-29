@@ -322,6 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2287713159100171211}
+  - component: {fileID: 6386212633707299613}
   m_Layer: 5
   m_Name: DOLLAR Currency Viewer
   m_TagString: Untagged
@@ -349,3 +350,15 @@ RectTransform:
   m_AnchoredPosition: {x: 94, y: -68}
   m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &6386212633707299613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5718938276925561201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaab306e0d3246b592edcd207b17daf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
