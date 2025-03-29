@@ -17,7 +17,6 @@ namespace Core
         public void EarnDollars(int amount)
         {
             Dollars += amount;
-            Debug.Log($"+{amount}$ | Тепер: {Dollars}$");
 
             EventManager.RaiseOnPlayerGetDollars(Dollars);
         }
@@ -36,10 +35,8 @@ namespace Core
         public void EarnGems(int amount)
         {
             Gems += amount;
-            Debug.Log($"+{amount}$ | Тепер: {Dollars}$");
 
             EventManager.RaiseOnPlayerGetGems(Gems);
-
         }
 
         public bool SpendGems(int amount)

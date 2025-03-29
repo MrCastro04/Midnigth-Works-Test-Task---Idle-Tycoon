@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 8258206539075138340}
   - component: {fileID: 3562693180129648154}
   - component: {fileID: 6146744243606508366}
+  - component: {fileID: 3609493701253968891}
   m_Layer: 0
   m_Name: Bread Department
   m_TagString: Untagged
@@ -568,6 +569,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 68d607704bda136428e9576980500da5, type: 2}
+--- !u!114 &3609493701253968891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8143948377064963981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286bfc4dc20743fbb7e42a2d3f29b2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8362749653487721400
 GameObject:
   m_ObjectHideFlags: 0

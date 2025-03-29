@@ -9,6 +9,7 @@ namespace NPC.States_And_Controller
         public readonly AISearhCashierState SearhCashierState = new();
         public readonly AISearchBreadDepartmentState SearchBreadDepartmentState = new();
         public readonly AIPaymentState PaymentState = new();
+        public readonly AITakingBreadState TakingBreadState = new();
 
         private AIBaseState _currentState;
 

@@ -27,7 +27,7 @@ namespace NPC.States_And_Controller
 
             if (npc.ReachedDestination())
             {
-                npc.SwitchState(npc.SearhCashierState);
+                npc.SwitchState(npc.TakingBreadState);
 
                 Debug.Log("NPC дійшов до хліба. Перехід у стан отримання.");
             }
