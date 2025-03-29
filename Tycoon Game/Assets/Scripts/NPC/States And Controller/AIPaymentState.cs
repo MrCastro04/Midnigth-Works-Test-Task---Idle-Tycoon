@@ -1,3 +1,4 @@
+using Core;
 using UnityEngine;
 
 namespace NPC.States_And_Controller
@@ -20,9 +21,11 @@ namespace NPC.States_And_Controller
 
             if (_paymentTimer >= PaymentDuration)
             {
-                Debug.Log("NPC оплатив покупку. Завершення логіки або вихід.");
+                // 1. Додати гроші
+                PlayerResources.Instance.EarnDollars(10); // Наприклад: 10$ за оплату
 
-                GameObject.Destroy(npc.gameObject); // тимчасово — видаляємо NPC
+                // 2. Видалити NPC (або перевести в інший стан)
+                GameObject.Destroy(npc.gameObject);
             }
         }
     }
