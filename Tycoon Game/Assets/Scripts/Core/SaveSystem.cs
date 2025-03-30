@@ -18,8 +18,6 @@ namespace Core
         {
             if (!File.Exists(SavePath))
             {
-                Debug.Log("Файл сейву не знайдено, створюється новий...");
-
                 return new SaveData
                 {
                     Dollars = 0,

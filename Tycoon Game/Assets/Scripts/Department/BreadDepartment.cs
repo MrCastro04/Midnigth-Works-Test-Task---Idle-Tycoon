@@ -7,13 +7,11 @@ namespace Department
     {
         private int _currentLevel;
         private int _lastLevel = 100;
-
         private int _priceValue;
         private int _currentUpgradeCost;
-
         private float _processingCooldown = 3f;
-
         private Department _department;
+
 
         private void Awake()
         {
@@ -49,14 +47,18 @@ namespace Department
             if (PlayerResources.Instance.Dollars < _currentUpgradeCost) return;
 
             PlayerResources.Instance.SpendDollars(_currentUpgradeCost);
+
             UpgradeDepartment();
         }
 
         private void UpgradeDepartment()
         {
+            if(_currentLevel >= _lastLevel) return;
+
             _currentLevel++;
             _currentUpgradeCost *= 2;
-            _priceValue += 5;
+            _priceValue += (_currentUpgradeCost / 10);
+
 
             var save = GameManager.Instance.CurrentSave;
             save.BreadDepartment_CurentLevel = _currentLevel;

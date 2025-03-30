@@ -21,8 +21,6 @@ namespace Core
             DontDestroyOnLoad(gameObject);
 
             InitializeWithSave(SaveSystem.Load());
-
-            Debug.Log("Сейв завантажено й збережено за шляхом:" + $"{Application.persistentDataPath}");
         }
 
         private void OnEnable()

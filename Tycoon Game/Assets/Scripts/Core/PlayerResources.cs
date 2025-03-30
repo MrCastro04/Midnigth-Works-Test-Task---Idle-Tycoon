@@ -31,15 +31,13 @@ namespace Core
             EventManager.RaiseOnPlayerGetDollars(Dollars);
         }
 
-        public bool SpendDollars(int amount)
+        public void SpendDollars(int amount)
         {
-            if (Dollars < amount) return false;
+            if (Dollars < amount) return;
 
             Dollars -= amount;
 
             EventManager.RaiseOnPlayerSpendDollars(Dollars);
-
-            return true;
         }
 
         public void EarnGems(int amount)
@@ -49,15 +47,13 @@ namespace Core
             EventManager.RaiseOnPlayerGetGems(Gems);
         }
 
-        public bool SpendGems(int amount)
+        public void SpendGems(int amount)
         {
-            if (Gems < amount) return false;
+            if (Gems < amount) return;
 
             Gems -= amount;
 
             EventManager.RaiseOnPlayerSpendGems(Gems);
-
-            return true;
         }
     }
 }

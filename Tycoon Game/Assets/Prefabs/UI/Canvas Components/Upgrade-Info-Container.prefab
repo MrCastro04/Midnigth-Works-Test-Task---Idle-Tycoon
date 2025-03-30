@@ -990,6 +990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1020509842271616191}
   - component: {fileID: 3861847782761151555}
+  - component: {fileID: 6800106139387074860}
   m_Layer: 5
   m_Name: Upgrade Button
   m_TagString: Untagged
@@ -1061,3 +1062,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6800106139387074860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843030946454094316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107e64d72019415eb0dc7520839a90f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

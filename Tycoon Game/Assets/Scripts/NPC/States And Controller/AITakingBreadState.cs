@@ -1,4 +1,5 @@
 using Core;
+using Department;
 using UnityEngine;
 using Utility;
 
@@ -6,6 +7,8 @@ namespace NPC.States_And_Controller
 {
     public class AITakingBreadState : AIBaseState
     {
+        private BreadDepartment _breadDepartment;
+
         private float _takingTimer;
 
         public override void EnterState(NPCController npc)

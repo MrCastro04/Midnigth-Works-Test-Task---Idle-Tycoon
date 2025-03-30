@@ -16,14 +16,21 @@ namespace UI.CanvasComponents
         private void OnEnable()
         {
             EventManager.OnPlayerGetDollars += HandlePlayerGetDollars;
+            EventManager.OnPlayerSpendDollars += HandlePlatyerSpendDollars;
         }
 
         private void OnDisable()
         {
             EventManager.OnPlayerGetDollars += HandlePlayerGetDollars;
+            EventManager.OnPlayerSpendDollars += HandlePlatyerSpendDollars;
         }
 
         private void HandlePlayerGetDollars(int dollarAmount)
+        {
+            _dollarTextAmount.text = dollarAmount.ToString();
+        }
+
+        private void HandlePlatyerSpendDollars(int dollarAmount)
         {
             _dollarTextAmount.text = dollarAmount.ToString();
         }
