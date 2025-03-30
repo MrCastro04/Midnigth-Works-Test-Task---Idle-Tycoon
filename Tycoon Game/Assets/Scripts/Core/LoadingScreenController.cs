@@ -2,7 +2,6 @@ using System.Collections;
 using TMPro;
 using UI.Canvas;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Core
@@ -24,7 +23,7 @@ namespace Core
         {
             while (_progressBar.value < _progressBar.maxValue)
             {
-                _progressBar.value += _progressBar.maxValue * 0.01f;
+                _progressBar.value += (_progressBar.maxValue * 0.01f) / 5f;
 
                 yield return null;
             }
