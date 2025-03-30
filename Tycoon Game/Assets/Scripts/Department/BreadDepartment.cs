@@ -12,6 +12,7 @@ namespace Department
         private float _processingCooldown = 3f;
         private Department _department;
 
+        public float ProcessingCooldown => _processingCooldown;
 
         private void Awake()
         {

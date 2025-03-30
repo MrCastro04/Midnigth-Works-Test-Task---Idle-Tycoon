@@ -1,3 +1,4 @@
+using UI.CanvasComponents;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,20 +11,26 @@ namespace NPC.States_And_Controller
         public readonly AISearchBreadDepartmentState SearchBreadDepartmentState = new();
         public readonly AIPaymentState PaymentState = new();
         public readonly AITakingBreadState TakingBreadState = new();
+        public readonly AISpawnState SpawnState = new();
 
         private AIBaseState _currentState;
 
+        public Canvas ProgressCanvas { get; private set; }
+        public ProgressbarController ProgressBarController { get; private set; }
         public NavMeshAgent Agent { get; private set; }
 
         private void Awake()
         {
             Agent = GetComponent<NavMeshAgent>();
 
-            _currentState = SearchBreadDepartmentState;
+            ProgressCanvas = GetComponentInChildren<Canvas>();
+
+            ProgressBarController = ProgressCanvas.GetComponentInChildren<ProgressbarController>();
         }
 
         private void Start()
         {
+            _currentState = SpawnState;
             _currentState.EnterState(this);
         }
 
