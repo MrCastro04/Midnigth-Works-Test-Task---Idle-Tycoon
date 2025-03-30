@@ -14,6 +14,16 @@ namespace Core
             Instance = this;
         }
 
+        public void InitializeFromSave(SaveData save)
+        {
+            Dollars = save.Dollars;
+            Gems = save.Gems;
+
+            EventManager.RaiseOnPlayerGetDollars(Dollars);
+            EventManager.RaiseOnPlayerGetGems(Gems);
+        }
+
+
         public void EarnDollars(int amount)
         {
             Dollars += amount;

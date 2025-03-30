@@ -21,8 +21,6 @@ namespace Core
             DontDestroyOnLoad(gameObject);
 
             InitializeWithSave(SaveSystem.Load());
-            
-            SaveSystem.Save(CurrentSave);
 
             Debug.Log("Сейв завантажено й збережено за шляхом:" + $"{Application.persistentDataPath}");
         }
@@ -39,10 +37,11 @@ namespace Core
             EventManager.OnPlayerClickCloseWindowButton -= HandlePlayerClickCloseWindowButton;
         }
 
-        public void InitializeWithSave(SaveData data)
+        private void InitializeWithSave(SaveData data)
         {
             CurrentSave = data;
-            Debug.Log($"Прогрес завантажено: гроші: {data.Dollars}");
+
+            PlayerResources.Instance.InitializeFromSave(CurrentSave);
         }
 
         private void HandleCanvasActive()

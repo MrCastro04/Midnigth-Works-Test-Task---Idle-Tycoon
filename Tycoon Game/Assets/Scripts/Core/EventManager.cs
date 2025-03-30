@@ -1,4 +1,5 @@
 using System;
+using Department;
 using Scriptable_Objects;
 
 namespace Core
@@ -10,6 +11,10 @@ namespace Core
         public static event Action OnPlayerBuildDepartment;
         public static event Action OnPlayerClickCloseWindowButton;
         public static event Action OnCanvasActive;
+        public static event Action OnPlayerClickOnBreadDepartmentUpgradeButton;
+        public static event Action OnPlayerClickOnCashierDepartmentUpgradeButton;
+        public static event Action <BreadDepartment> OnPlayerUpgradeBreadDepartment;
+        public static event Action  OnPlayerUpgradeCashierDepartment;  // додати <CashierDepartment>
         public static event Action<DepartmentData> OnPlayerClickOnDepartment;
         public static event Action <int> OnPlayerGetDollars;
         public static event Action <int> OnPlayerGetGems;
@@ -21,7 +26,12 @@ namespace Core
         public static void RaiseOnPlayerBuildDepartment() => OnPlayerBuildDepartment?.Invoke();
         public static void RaiseOnPlayerClickCloseWindowButton() => OnPlayerClickCloseWindowButton?.Invoke();
         public static void RaiseOnCanvasActive() => OnCanvasActive?.Invoke();
+        public static void RaiseOnPlayerClickOnUpgradeButton() => OnPlayerClickOnBreadDepartmentUpgradeButton?.Invoke();
+        public static void RaiseOnPlayerClickOnCashierDepartmentUpgradeButton() => OnPlayerClickOnCashierDepartmentUpgradeButton?.Invoke();
+        public static void RaiseOnPlayerUpgradeCashierDepartment() => OnPlayerUpgradeCashierDepartment?.Invoke();
 
+        public static void RaiseOnPlayerUpgradeBreadDepartment(BreadDepartment breadDepartment) =>
+            OnPlayerUpgradeBreadDepartment?.Invoke(breadDepartment);
         public static void RaiseOnPlayerClickOnDepartment (DepartmentData departmentData) =>
             OnPlayerClickOnDepartment?.Invoke(departmentData);
 

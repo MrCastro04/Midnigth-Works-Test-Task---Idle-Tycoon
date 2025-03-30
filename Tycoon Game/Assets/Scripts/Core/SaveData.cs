@@ -21,5 +21,6 @@ namespace Core
         public int BreadDepartment_LastLevel;
         public int BreadDepartment_UpgradeCost;
         public int BreadDepartment_UnitPrice;
+        public float BreadDepartment_ProcessingValue;
     }
 }
