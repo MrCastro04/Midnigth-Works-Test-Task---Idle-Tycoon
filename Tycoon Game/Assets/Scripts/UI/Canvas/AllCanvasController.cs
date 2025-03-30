@@ -1,6 +1,7 @@
 using Core;
 using Scriptable_Objects;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace UI.Canvas
 {
@@ -8,12 +9,16 @@ namespace UI.Canvas
     {
         private UpgradeBreadDepCanvasController _upgradeBreadDepCanvas;
         private UpgradeCashierDepCanvasController _upgradeCashierDepCanvas;
+        private ExitPromtCanvasController _exitPromtCanvas;
+        private bool _canExitPromtCanvas = true;
 
         private void Awake()
         {
             _upgradeBreadDepCanvas = GetComponentInChildren<UpgradeBreadDepCanvasController>();
 
             _upgradeCashierDepCanvas = GetComponentInChildren<UpgradeCashierDepCanvasController>();
+
+            _exitPromtCanvas = GetComponentInChildren<ExitPromtCanvasController>();
         }
 
         private void OnEnable()
@@ -24,6 +29,13 @@ namespace UI.Canvas
        private void OnDisable()
        {
            EventManager.OnPlayerClickOnDepartment -= HandlePlayerClickOnDepartment;
+       }
+
+       public void HandleExitPromt(InputAction.CallbackContext context)
+       {
+           if(context.performed == false || !_canExitPromtCanvas) return;
+
+           
        }
 
        private void HandlePlayerClickOnDepartment(DepartmentData departmentData)
