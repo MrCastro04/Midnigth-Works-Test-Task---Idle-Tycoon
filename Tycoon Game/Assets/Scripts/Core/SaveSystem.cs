@@ -37,6 +37,7 @@ namespace Core
                     BreadDepartment_LastLevel = 100,
                     BreadDepartment_UpgradeCost = 10,
                     BreadDepartment_UnitPrice = 2,
+                    BreadDepartment_ProcessingValue = 0f
                 };
             }
 

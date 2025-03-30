@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Department
 {
-    public class BreadDepartment : MonoBehaviour
+      public class BreadDepartment : MonoBehaviour
     {
         private int _currentLevel;
         private int _lastLevel = 100;
@@ -12,11 +12,8 @@ namespace Department
         private int _currentUpgradeCost;
 
         private float _processingCooldown = 3f;
-        private float _processingValue;
 
         private Department _department;
-
-        public int CurrentUpgradeCost => _currentUpgradeCost;
 
         private void Awake()
         {
@@ -30,9 +27,6 @@ namespace Department
             _currentLevel = save.BreadDepartment_CurentLevel;
             _currentUpgradeCost = save.BreadDepartment_UpgradeCost;
             _priceValue = save.BreadDepartment_UnitPrice;
-            _processingValue = save.BreadDepartment_ProcessingValue;
-
-            UpdateProcessingValue();
         }
 
         private void OnEnable()
@@ -64,23 +58,19 @@ namespace Department
             _currentUpgradeCost *= 2;
             _priceValue += 5;
 
-            UpdateProcessingValue();
-
             var save = GameManager.Instance.CurrentSave;
-
             save.BreadDepartment_CurentLevel = _currentLevel;
             save.BreadDepartment_UpgradeCost = _currentUpgradeCost;
             save.BreadDepartment_UnitPrice = _priceValue;
-            save.BreadDepartment_ProcessingValue = _processingValue;
 
             SaveSystem.Save(save);
+            EventManager.RaiseOnPlayerUpgradeBreadDepartment();
         }
 
-        private void UpdateProcessingValue()
+        public float GetProcessingValue()
         {
             float unitsPerMinute = 60f / _processingCooldown;
-
-            _processingValue = unitsPerMinute * _priceValue;
+            return unitsPerMinute * _priceValue;
         }
     }
 }

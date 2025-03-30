@@ -13,7 +13,7 @@ namespace Core
         public static event Action OnCanvasActive;
         public static event Action OnPlayerClickOnBreadDepartmentUpgradeButton;
         public static event Action OnPlayerClickOnCashierDepartmentUpgradeButton;
-        public static event Action <BreadDepartment> OnPlayerUpgradeBreadDepartment;
+        public static event Action OnPlayerUpgradeBreadDepartment;
         public static event Action  OnPlayerUpgradeCashierDepartment;  // додати <CashierDepartment>
         public static event Action<DepartmentData> OnPlayerClickOnDepartment;
         public static event Action <int> OnPlayerGetDollars;
@@ -29,9 +29,7 @@ namespace Core
         public static void RaiseOnPlayerClickOnUpgradeButton() => OnPlayerClickOnBreadDepartmentUpgradeButton?.Invoke();
         public static void RaiseOnPlayerClickOnCashierDepartmentUpgradeButton() => OnPlayerClickOnCashierDepartmentUpgradeButton?.Invoke();
         public static void RaiseOnPlayerUpgradeCashierDepartment() => OnPlayerUpgradeCashierDepartment?.Invoke();
-
-        public static void RaiseOnPlayerUpgradeBreadDepartment(BreadDepartment breadDepartment) =>
-            OnPlayerUpgradeBreadDepartment?.Invoke(breadDepartment);
+        public static void RaiseOnPlayerUpgradeBreadDepartment() => OnPlayerUpgradeBreadDepartment?.Invoke();
         public static void RaiseOnPlayerClickOnDepartment (DepartmentData departmentData) =>
             OnPlayerClickOnDepartment?.Invoke(departmentData);
 
