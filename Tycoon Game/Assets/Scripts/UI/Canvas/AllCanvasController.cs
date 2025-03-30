@@ -7,57 +7,59 @@ namespace UI.Canvas
 {
     public class AllCanvasController : MonoBehaviour
     {
-        private UpgradeBreadDepCanvasController _upgradeBreadDepCanvas;
-        private UpgradeCashierDepCanvasController _upgradeCashierDepCanvas;
-        private ExitPromtCanvasController _exitPromtCanvas;
-        private bool _canExitPromtCanvas = true;
+        public UpgradeBreadDepCanvasState BreadState;
+        public UpgradeCashierDepCanvasState CashierState;
+        public ExitPromptCanvasState ExitPromptState;
+
+        private BaseCanvasState _currentState;
 
         private void Awake()
         {
-            _upgradeBreadDepCanvas = GetComponentInChildren<UpgradeBreadDepCanvasController>();
-
-            _upgradeCashierDepCanvas = GetComponentInChildren<UpgradeCashierDepCanvasController>();
-
-            _exitPromtCanvas = GetComponentInChildren<ExitPromtCanvasController>();
+            BreadState = GetComponentInChildren<UpgradeBreadDepCanvasState>(true);
+            CashierState = GetComponentInChildren<UpgradeCashierDepCanvasState>(true);
+            ExitPromptState = GetComponentInChildren<ExitPromptCanvasState>(true);
         }
 
         private void OnEnable()
-       {
-           EventManager.OnPlayerClickOnDepartment += HandlePlayerClickOnDepartment;
-       }
+        {
+            EventManager.OnPlayerClickOnDepartment += HandleDepartmentClick;
+        }
 
-       private void OnDisable()
-       {
-           EventManager.OnPlayerClickOnDepartment -= HandlePlayerClickOnDepartment;
-       }
+        private void OnDisable()
+        {
+            EventManager.OnPlayerClickOnDepartment -= HandleDepartmentClick;
+        }
 
-       public void HandleExitPromt(InputAction.CallbackContext context)
-       {
-           if(context.performed == false || !_canExitPromtCanvas) return;
+        public void HandleExitPrompt(InputAction.CallbackContext context)
+        {
+            if (!context.performed) return;
 
-           
-       }
+            SwitchState(ExitPromptState);
+        }
 
-       private void HandlePlayerClickOnDepartment(DepartmentData departmentData)
-       {
-           switch (departmentData.DepartmentName)
-           {
-                 case "Bread Department":
+        private void HandleDepartmentClick(DepartmentData data)
+        {
+            switch (data.DepartmentName)
+            {
+                case "Bread Department":
+                    SwitchState(BreadState);
+                    break;
 
-                     _upgradeBreadDepCanvas.SetActiveCanvasTrue();
+                case "Cash Department":
+                    SwitchState(CashierState);
+                    break;
+            }
 
-                     EventManager.RaiseOnCanvasActive();
+            EventManager.RaiseOnCanvasActive();
+        }
 
-                     break;
+        public void SwitchState(BaseCanvasState newState)
+        {
+            _currentState?.ExitState();
 
-                 case "Cash Department":
+            _currentState = newState;
 
-                     _upgradeCashierDepCanvas.SetActiveCanvasTrue();
-
-                     EventManager.RaiseOnCanvasActive();
-
-                     break;
-           }
-       }
+            _currentState.EnterState();
+        }
     }
 }
