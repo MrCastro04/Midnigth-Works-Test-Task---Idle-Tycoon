@@ -59,7 +59,6 @@ namespace Department
             _currentUpgradeCost *= 2;
             _priceValue += (_currentUpgradeCost / 10);
 
-
             var save = GameManager.Instance.CurrentSave;
             save.BreadDepartment_CurentLevel = _currentLevel;
             save.BreadDepartment_UpgradeCost = _currentUpgradeCost;
