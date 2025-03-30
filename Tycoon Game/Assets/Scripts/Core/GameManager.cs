@@ -19,6 +19,12 @@ namespace Core
             Instance = this;
 
             DontDestroyOnLoad(gameObject);
+
+            InitializeWithSave(SaveSystem.Load());
+            
+            SaveSystem.Save(CurrentSave);
+
+            Debug.Log("Сейв завантажено й збережено за шляхом:" + $"{Application.persistentDataPath}");
         }
 
         private void OnEnable()
